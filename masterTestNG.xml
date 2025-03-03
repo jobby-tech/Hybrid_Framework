@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="TestSuit" thread-count="5" >
+        <parameter name="os" value="Windows"/>
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+            <class name="testCases.TC_Login" />
+        </classes>
+
+    </test>
+</suite>

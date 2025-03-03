@@ -1,0 +1,4 @@
+[DEBUG] 2025-03-03 11:29:04,787 PackageRelationshipCollection.parseRelationshipsPart() - Parsing relationship: /xl/_rels/workbook.xml.rels
+[DEBUG] 2025-03-03 11:29:04,792 PackageRelationshipCollection.parseRelationshipsPart() - Parsing relationship: /xl/worksheets/_rels/sheet1.xml.rels
+[DEBUG] 2025-03-03 11:29:04,794 PackageRelationshipCollection.parseRelationshipsPart() - Parsing relationship: /_rels/.rels
+[DEBUG] 2025-03-03 11:29:04,819 PackageRelationshipCollection.parseRelationshipsPart() - Parsing relationship: /xl/_rels/workbook.xml.rels
