@@ -5,12 +5,13 @@ import org.testng.annotations.Test;
 import pageObjects.AccountPage;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import testBase.BaseClass;
 import utilities.DataProviders;
 
-public class TC_Login extends BaseClass{
+public class TC_Login extends BaseClass {
 
-    @Test(dataProvider = "LoginData",dataProviderClass = DataProviders.class)
-    public void verifyLogin(String email, String pass){
+    @Test(dataProvider = "LoginData",dataProviderClass = DataProviders.class, groups = {"Sanity","dataDriven"})
+    public void verifyLogin(String UserName, String Password,String Result){
         logger.info("Starting Login Test case");
 
         try {
@@ -21,12 +22,17 @@ public class TC_Login extends BaseClass{
             hp.clickMyAcc();
             hp.clickLogin();
 
-            lp.setTxtEmail(prop.getProperty(email));
-            lp.setTxtPass(prop.getProperty(pass));
+            Thread.sleep(5000);
+            lp.setTxtEmail(UserName);
+            lp.setTxtPass(Password);
             lp.clickLogin();
 
             Assert.assertTrue(ap.isMyAccPageExist());
+
+            hp.clickMyAcc();
             ap.clickLogout();
+
+            System.out.println(Result);
         }
         catch (Exception e){
             Assert.fail();
