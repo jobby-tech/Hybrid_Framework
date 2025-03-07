@@ -5,8 +5,9 @@ import org.testng.annotations.Test;
 import pageObjects.AccountPage;
 import pageObjects.HomePage;
 import pageObjects.RegisterPage;
+import testBase.BaseClass;
 
-public class TC_AccountRegister extends BaseClass{
+public class TC_AccountRegister extends BaseClass {
 
    @Test public void verifyPrivacyError(){
 
