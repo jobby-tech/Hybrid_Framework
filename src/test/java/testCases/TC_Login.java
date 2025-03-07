@@ -10,7 +10,7 @@ import utilities.DataProviders;
 public class TC_Login extends BaseClass{
 
     @Test(dataProvider = "LoginData",dataProviderClass = DataProviders.class)
-    public void verifyLogin(String email, String pass){
+    public void verifyLogin(String email, String pass,String status){
         logger.info("Starting Login Test case");
 
         try {
@@ -21,8 +21,8 @@ public class TC_Login extends BaseClass{
             hp.clickMyAcc();
             hp.clickLogin();
 
-            lp.setTxtEmail(prop.getProperty(email));
-            lp.setTxtPass(prop.getProperty(pass));
+            lp.setTxtEmail(email);
+            lp.setTxtPass(pass);
             lp.clickLogin();
 
             Assert.assertTrue(ap.isMyAccPageExist());
