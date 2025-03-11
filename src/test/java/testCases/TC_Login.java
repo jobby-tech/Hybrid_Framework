@@ -22,9 +22,10 @@ public class TC_Login extends BaseClass {
             hp.clickMyAcc();
             hp.clickLogin();
 
-            Thread.sleep(5000);
+            Thread.sleep(3000);
             lp.setTxtEmail(UserName);
             lp.setTxtPass(Password);
+            Thread.sleep(3000);
             lp.clickLogin();
 
             Assert.assertTrue(ap.isMyAccPageExist());
